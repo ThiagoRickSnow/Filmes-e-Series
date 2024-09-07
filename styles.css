@@ -166,4 +166,16 @@ footer {
     footer {
         font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
     }
+
+
+
+/* Estiliza as divs dos filmes geradas dinamicamente */
+[class^="filme-"] {
+    border: 4px solid #30475E;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 }

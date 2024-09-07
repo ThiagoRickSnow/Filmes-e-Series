@@ -1,6 +1,6 @@
 const filmes = [
     {
-        titulo: "O Poderoso Chefão",
+        titulo: "O Poderoso Chefinho",
         sinopse: "A história da ascensão e queda de uma poderosa família mafiosa italiana em Nova York.",
         genero: "Crime, Drama",
         trailer: "https://www.youtube.com/watch?v=SaHZHU-44XA",

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Filmes e Séries</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Filmes e Séries</h1>
+    </header>
+
+    <main>
+        <section>
+            <!-- Adicionei o id="pesquisa" no input -->
+            <input type="text" id="pesquisa" name="search" placeholder="Digite sua pesquisa">
+            <!-- Adicionei o id="btnPesquisar" no botão -->
+            <button id="btnPesquisar">Pesquisar</button>
+        </section>
+
+        <!-- Container onde os filmes serão exibidos -->
+        <div class="resultados-filmes"></div>
+    </main>
+
+    <footer>
+        <p>Meus Filmes e Séries Locais</p>
+        <p>Thiago Henrique Duarte Neves</p>
+    </footer>
+
+    <!-- Incluindo o arquivo dados.js -->
+    <script src="dados.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

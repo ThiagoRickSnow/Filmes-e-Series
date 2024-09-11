@@ -5,7 +5,8 @@ const resultadosFilmes = document.querySelector('.resultados-filmes');
 function exibirFilmes(filmes) {
     resultadosFilmes.innerHTML = ''; // Limpa os resultados anteriores
     if (filmes.length === 0) {
-        resultadosFilmes.innerHTML = '<p>Nenhum filme encontrado.</p>'; // Mensagem caso não haja resultados
+        resultadosFilmes.innerHTML = '<p class="no-results">Nenhum filme encontrado.</p>; 
+// Mensagem caso não haja resultados
         return;
     }
 

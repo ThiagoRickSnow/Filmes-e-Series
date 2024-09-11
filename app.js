@@ -4,16 +4,17 @@ const resultadosFilmes = document.querySelector('.resultados-filmes');
 // Função para criar os elementos de cada filme
 function exibirFilmes(filmes) {
     resultadosFilmes.innerHTML = ''; // Limpa os resultados anteriores
-    let contador = 0; // Inicializa um contador para gerar classes únicas
+    if (filmes.length === 0) {
+        resultadosFilmes.innerHTML = '<p>Nenhum filme encontrado.</p>'; // Mensagem caso não haja resultados
+        return;
+    }
 
+    let contador = 0; // Inicializa um contador para gerar classes únicas
     filmes.forEach(filme => {
-      // Cria um elemento div para o filme
       const filmeDiv = document.createElement('div');
-      // Gera uma classe única usando o contador
       const classeUnica = `filme-${contador}`;
       filmeDiv.classList.add(classeUnica);
 
-      // Insere o título, sinopse, gênero, link do trailer e ano
       filmeDiv.innerHTML = `
         <h2>${filme.titulo}</h2>
         <p><strong>Sinopse:</strong> ${filme.sinopse}</p>

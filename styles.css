@@ -101,6 +101,13 @@ section button:hover {
     color: #45474B; /* Cor do texto */
     margin: 0.5rem 0; /* Margem acima e abaixo */
 }
+.no-results {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    display: flex; /* Utiliza Flexbox */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100%; /* Define a altura completa do container */
+}
 
 /* Estiliza o rodapé da página */
 footer {

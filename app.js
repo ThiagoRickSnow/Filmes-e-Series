@@ -5,14 +5,14 @@ const resultadosFilmes = document.querySelector('.resultados-filmes');
 function exibirFilmes(filmes) {
     resultadosFilmes.innerHTML = ''; // Limpa os resultados anteriores
     let contador = 0; // Inicializa um contador para gerar classes únicas
-  
+
     filmes.forEach(filme => {
       // Cria um elemento div para o filme
       const filmeDiv = document.createElement('div');
       // Gera uma classe única usando o contador
       const classeUnica = `filme-${contador}`;
       filmeDiv.classList.add(classeUnica);
-  
+
       // Insere o título, sinopse, gênero, link do trailer e ano
       filmeDiv.innerHTML = `
         <h2>${filme.titulo}</h2>
@@ -21,11 +21,11 @@ function exibirFilmes(filmes) {
         <p><strong>Ano:</strong> ${filme.ano}</p>
         <a href="${filme.trailer}" target="_blank">Assistir Trailer</a>
       `;
-  
+
       resultadosFilmes.appendChild(filmeDiv);
       contador++;
     });
-  }
+}
 
 // Seleciona o botão de pesquisa e o campo de pesquisa
 const btnPesquisar = document.getElementById('btnPesquisar');
@@ -37,7 +37,8 @@ function realizarPesquisa() {
 
     // Verifica se o campo está vazio
     if (pesquisa === "") {
-        return []; // Se estiver vazio, retorna um array vazio
+        exibirFilmes([]); // Limpa os resultados se a pesquisa estiver vazia
+        return;
     }
 
     const filmesFiltrados = filmes.filter(filme => 
@@ -46,11 +47,13 @@ function realizarPesquisa() {
         )
     );
 
-    return filmesFiltrados; // Retorna os filmes filtrados
+    exibirFilmes(filmesFiltrados); // Exibe os filmes filtrados
 }
 
 // Adiciona o event listener ao botão de pesquisa
-btnPesquisar.addEventListener('click', realizarPesquisa);
+btnPesquisar.addEventListener('click', function() {
+    realizarPesquisa();
+});
 
 // Adiciona o event listener para o campo de pesquisa
 campoPesquisa.addEventListener('keydown', function(event) {

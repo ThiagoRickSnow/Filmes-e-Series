@@ -15,13 +15,14 @@
     </header>
 
     <main>
-        <section>
-        <P></P>    
-            <!-- Adicionei o id="pesquisa" no input -->
-            <input type="text" id="pesquisa" name="search" placeholder="Digite sua pesquisa">
-            <!-- Adicionei o id="btnPesquisar" no botão -->
-            <button id="btnPesquisar">Pesquisar</button>
-        </section>
+  <section>
+    <P></P>    
+    <!-- Adicionando o pattern para filtrar o texto -->
+    <input type="text" id="pesquisa" name="search" placeholder="Digite sua pesquisa" 
+           pattern="[A-Za-z0-9\s]{3,50}" title="Digite entre 3 a 50 caracteres alfanuméricos">
+    <!-- Adicionei o id="btnPesquisar" no botão -->
+    <button id="btnPesquisar">Pesquisar</button>
+</section>
 
         <!-- Container onde os filmes serão exibidos -->
         <div class="resultados-filmes"></div>

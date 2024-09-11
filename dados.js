@@ -1,6 +1,6 @@
 const filmes = [
     {
-        titulo: "O Poderoso Chefinho",
+        titulo: "O Poderoso Chefão",
         sinopse: "A história da ascensão e queda de uma poderosa família mafiosa italiana em Nova York.",
         genero: "Crime, Drama",
         trailer: "https://www.youtube.com/watch?v=SaHZHU-44XA",
@@ -50,7 +50,7 @@ const filmes = [
     {
         titulo: "Interestelar",
         sinopse: "Um grupo de astronautas embarca em uma missão para encontrar um novo lar para a humanidade.",
-        genero: "Ficção Científica",
+        genero: "ficção científica",
         trailer: "https://www.youtube.com/watch?v=i6avfCqKcQo",
         ano: "2014",
         tags: ["todos"]

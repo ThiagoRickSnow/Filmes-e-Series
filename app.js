@@ -33,7 +33,12 @@ const campoPesquisa = document.getElementById('pesquisa');
 
 // Função de pesquisa
 function realizarPesquisa() {
-    const pesquisa = campoPesquisa.value.toLowerCase();
+    const pesquisa = campoPesquisa.value.toLowerCase().trim(); // Remove espaços extras e converte para minúsculas
+
+    // Verifica se o campo está vazio
+    if (pesquisa === "") {
+        return []; // Se estiver vazio, retorna um array vazio
+    }
 
     const filmesFiltrados = filmes.filter(filme => 
         Object.values(filme).some(valor => 
@@ -41,8 +46,7 @@ function realizarPesquisa() {
         )
     );
 
-    // Exibe os filmes filtrados
-    exibirFilmes(filmesFiltrados);
+    return filmesFiltrados; // Retorna os filmes filtrados
 }
 
 // Adiciona o event listener ao botão de pesquisa

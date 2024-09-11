@@ -33,11 +33,12 @@ const campoPesquisa = document.getElementById('pesquisa');
 
 // Função de pesquisa
 function realizarPesquisa() {
-    const pesquisa = campoPesquisa.value.toLowerCase().trim(); // Remove espaços extras e converte para minúsculas
+    const pesquisa = campoPesquisa.value.toLowerCase().trim();
 
-    // Verifica se o campo está vazio
-    if (pesquisa === "") {
-        exibirFilmes([]); // Limpa os resultados se a pesquisa estiver vazia
+    // Verifica se a pesquisa contém apenas letras, números ou espaços
+    const regex = /^[a-z0-9\s]{3,50}$/i;
+    if (!regex.test(pesquisa)) {
+        exibirFilmes([]); // Se o valor não for válido, exibe um array vazio
         return;
     }
 

@@ -9,31 +9,25 @@
 </head>
 
 <body>
-
     <header>
         <h1>Filmes e Séries</h1>
     </header>
 
     <main>
-  <section>
-    <P></P>    
-    <!-- Adicionando o pattern para filtrar o texto -->
-    <input type="text" id="pesquisa" name="search" placeholder="Digite sua pesquisa" 
-           pattern="[A-Za-z0-9\s]{3,50}" title="Digite entre 3 a 50 caracteres alfanuméricos">
-    <!-- Adicionei o id="btnPesquisar" no botão -->
-    <button id="btnPesquisar">Pesquisar</button>
-</section>
-
-        <!-- Container onde os filmes serão exibidos -->
+        <section>
+            <p></p>
+            <input type="text" id="pesquisa" name="search" placeholder="Digite sua pesquisa"
+                pattern="[A-Za-z0-9\s]{3,50}" title="Digite entre 3 a 50 caracteres alfanuméricos">
+            <button id="btnPesquisar">Pesquisar</button>
+        </section>
         <div class="resultados-filmes"></div>
     </main>
-
+
+    <p></p>
     <footer>
         <p>Meus Filmes e Séries Locais</p>
         <p>Thiago Henrique Duarte Neves</p>
     </footer>
-
-    <!-- Incluindo o arquivo dados.js -->
     <script src="dados.js"></script>
     <script src="app.js"></script>
 </body>
